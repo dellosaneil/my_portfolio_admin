@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/certificationFragment"
+        android:name="com.example.portfolioadmin.certification.CertificationFragment"
+        android:label="fragment_certification"
+        tools:layout="@layout/fragment_certification" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.portfolioadmin.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/homeFragment_projectFragment"
+            app:destination="@id/projectFragment" />
+        <action
+            android:id="@+id/homeFragment_certificationFragment"
+            app:destination="@id/certificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/projectFragment"
+        android:name="com.example.portfolioadmin.project.ProjectFragment"
+        android:label="fragment_project"
+        tools:layout="@layout/fragment_project" />
+</navigation>
